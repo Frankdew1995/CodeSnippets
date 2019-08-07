@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <style>
+
+      .desc {
+
+        display: none;
+      }
+
+    </style>
+
+
+
+    <div id="text">
+
+        <h4 class="desc" id="0"><strong><span style="color: #d7101e;">Stufe 4:</span></strong> <b>Quant.Risk</b> <b>Overlay </b>– Operative dynamische Portfolioabsicherung durch uns</h4>
+
+        <h4 class="desc" id="1"><strong><span style="color: #d7101e;">Stufe 3:</span></strong> <b>Quant.Risk</b> <b>Advisory </b>– Kontinuierliche Empfehlungen für das operative Risikomanagement</h4>
+
+        <h4 class="desc" id="2"><strong><span style="color: #d7101e;">Stufe 2:</span></strong> <b>Quant.Risk</b> <b>Reporting </b>– Fortlaufende Risikoanalyse Ihres Kundenportfolios</h4>
+
+        <h4 class="desc" id="3"><strong><span style="color: #d7101e;">Stufe 1:</span></strong> <b>Quant.Risk</b> <b>Workshop </b>– Ist-Analyse Ihres Risikomanagements</h4>
+
+    </div>
+
+    <!-- <script src="SlideText.js" charset="utf-8"></script> -->
+    <script type="text/javascript">
+
+      var i = 0;
+      ids = [];
+
+      interval = 3000;
+
+      ids[0] = "0";
+      ids[1] = "1";
+      ids[2] = "2";
+      ids[3] = "3";
+
+
+
+      function showText(){
+
+         document.getElementById(ids[i]).style.display = "block";
+
+
+         if (i < ids.length - 1) {
+
+
+           i++;
+         } else {
+           i = 0;
+         }
+
+
+         setTimeout("showText()", interval);
+
+
+
+
+      };
+
+
+      window.onload = showText;
+
+
+    </script>
+
+  </body>
+</html>

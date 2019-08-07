@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <style>
+
+      /* .container{
+
+        text-align:center;
+      } */
+
+      .desc {
+
+        display: none;
+      }
+
+
+      #text {
+        display:inline-block;
+      }
+
+       #slideshow{
+
+         display:inline-block;
+         margin-left:100px;
+
+       }
+
+
+
+    </style>
+
+    <div class="container">
+
+      <div id="text" width=100px>
+
+          <h4 class="desc" id="0"><strong><span style="color: #d7101e;">Stufe 4:</span></strong> <b>Quant.Risk</b> <b>Overlay </b>– Operative dynamische Portfolioabsicherung durch uns</h4>
+
+          <h4 class="desc" id="1"><strong><span style="color: #d7101e;">Stufe 3:</span></strong> <b>Quant.Risk</b> <b>Advisory </b>– Kontinuierliche Empfehlungen für das operative Risikomanagement</h4>
+
+          <h4 class="desc" id="2"><strong><span style="color: #d7101e;">Stufe 2:</span></strong> <b>Quant.Risk</b> <b>Reporting </b>– Fortlaufende Risikoanalyse Ihres Kundenportfolios</h4>
+
+          <h4 class="desc" id="3"><strong><span style="color: #d7101e;">Stufe 1:</span></strong> <b>Quant.Risk</b> <b>Workshop </b>– Ist-Analyse Ihres Risikomanagements</h4>
+
+      </div>
+
+      <div id="slideshow">
+
+          <img name="slide" width="300" height="300">
+
+      </div>
+
+
+    </div>
+
+
+
+
+  <script type="text/javascript">
+
+    var i = 0; 			// Start Point
+    var images = [];	// Images Array
+    var time = 3000;	// Time Between Switch
+
+    // Image List
+    images[0] = "https://www.quantcapital.de/wp-content/uploads/2019/08/1_workshop.png";
+    images[1] = "https://www.quantcapital.de/wp-content/uploads/2019/08/2_workshop_reporting.png";
+    images[2] = "https://www.quantcapital.de/wp-content/uploads/2019/08/3_workshop_reporting_advisory.png";
+    images[3] = "https://www.quantcapital.de/wp-content/uploads/2019/08/4_overlay_advisory_reporting_workshop.png";
+
+
+
+    // Change Image
+    function changeImg(){
+
+      document.slide.src = images[i];
+
+      // Check If Index Is Under Max
+      if(i < images.length - 1){
+        // Add 1 to Index
+        i++;
+      }
+
+
+      // Run function every x seconds
+      setTimeout("changeImg()", time);
+    }
+
+
+    var pos = 0;
+    ids = [];
+
+    interval = 3000;
+
+    ids[3] = "0";
+    ids[2] = "1";
+    ids[1] = "2";
+    ids[0] = "3";
+
+
+
+    function showText(){
+
+
+
+       document.getElementById(ids[pos]).style.display = "block";
+
+
+       if (pos < ids.length) {
+
+         pos++;
+
+       }
+
+       setTimeout("showText()", interval);
+
+    };
+
+
+    window.onload = function(){
+
+      showText();
+      changeImg();
+
+    };
+
+
+
+  </script>
+
+  </body>
+</html>
